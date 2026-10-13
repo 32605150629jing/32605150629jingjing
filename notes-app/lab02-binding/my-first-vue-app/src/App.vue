@@ -5,7 +5,8 @@
     <hr />
     <h2>📝 记事本雏形（综合任务）</h2>
 
-    <input v-model="newNote" placeholder="输入笔记内容" @keyup.enter="addNote" />
+    <input v-model="newNote" placeholder="输入笔记内容" @keyup.enter="addNote"  @keyup.esc="newNote = ''"
+/>    
     <button @click="addNote">添加</button>
     <br />
     <label><input type="radio" value="高" v-model="priority" /> 高</label>
@@ -60,5 +61,6 @@ export default {
     }
   }
 }
-</script>
+</script>  
+
 
